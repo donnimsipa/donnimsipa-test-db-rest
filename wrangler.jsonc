@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "donnimsipa-test-db-rest",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "donnimsipa-test-db",
+          "database_id": "0967c62e-1243-4318-a147-da2a4a8245b0"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "ebd7f938337f4b2dbb8c090f7ead3228",
+            "binding": "SECRET",
+            "secret_name": "SECRET"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
